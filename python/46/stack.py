@@ -1,3 +1,8 @@
+# False = 0, '', [] , {} , (), False, None
+# True = anything else
+
+
+#last in first out
 class Stack:
     def __init__(self):
       self._values = []
@@ -9,7 +14,17 @@ class Stack:
         return self._values.pop()
 
     def peek(self):
-        if len(self._values) > 0:
-          return self._values[-1]
-        else:
-          return None
+      return self._values[-1] if self._values else None
+
+        #if (self._values):
+         # return self._values[-1]
+       # else:
+         # return None
+
+
+stack = Stack()
+for i in range(10):
+    stack.push(i)
+
+while stack.peek() != None:
+    print(stack.pop())
