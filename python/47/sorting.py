@@ -36,4 +36,4 @@ accounts = [a1, a2]
 print(accounts)
 # print(sorted(accounts) #this is an error
 print(sorted(accounts, key= lambda account: account._account_holder))
-print(sorted(accounts, key= lambda account: account._get_balance()))
+print(sorted(accounts, key= lambda account: account.get_balance()))

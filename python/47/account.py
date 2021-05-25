@@ -66,7 +66,7 @@ class Minimum_Balance_Account(Account):
       return super().transact(amount)
 
 
-a3 = Minimum_Balance_Account('Jen', 200)
-print(a3)
+#a3 = Minimum_Balance_Account('Jen', 200)
+#print(a3)
 
-a3.transact(-300)
+#a3.transact(-300)
