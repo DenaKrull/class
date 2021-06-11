@@ -1,0 +1,95 @@
+html {
+    background-color: white;
+}
+
+body {
+    background-color: black;
+    /*color: #B575FF; */
+    color: rgba(181, 117, 255, .5);
+    /*width: 800px;*/
+    max-width: 800px;
+    /*width: 80%;*/
+    /*text-align: center;*/
+    margin: auto;
+    /*padding: 1em 2em;
+  padding: 1em 2em 3em; t rl b
+  padding: 1em 2em 3em 4em; /* t r b l*/
+    padding: 2em;
+    /* all sides */
+    text-align: justify;
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px inset gray;
+    padding-bottom: 1em;
+}
+
+header h1 {
+    font-style: italic;
+    color: green;
+    /*border: 1px solid black;*/
+    border-width: 2px;
+    border-style: dashed;
+    border-color: red;
+    border-bottom-width: 4px;
+    border-radius: 8px;
+}
+
+
+/*p,*/
+
+h1 {
+    color: red;
+    /* color: green; */
+    /*text-align: justify;*/
+}
+
+header image {
+    width: 300px;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    /* color: white;*/
+}
+
+
+/*unvisited link*/
+
+a:link {
+    color: white;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: darkgray;
+}
+
+a:focus {
+    color: yellow;
+}
+
+a:hover {
+    color: fuchsia;
+}
+
+
+/* while clicking */
+
+a:active {
+    color: greenyellow;
+}
+
+#copyright {
+    font-weight: bold;
+}
+
+nav ul,
+nav li {
+    display: inline;
+    padding-left: 0;
+}
