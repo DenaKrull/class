@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            gap: .5em;
+            grid-auto-rows: 100px;
+        }
+        
+        div {
+            background-color: red;
+        }
+        
+        @media screen and (min-width: 600px) {
+            body {
+                grid-template-columns: 1fr 1fr;
+            }
+            div:nth-child(1) {
+                grid-column-start: span 2;
+            }
+        }
+        
+        @media screen and (min-width: 800px) {
+            body {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            /* div:nth-child(1) {
+                grid-column-start: span 2;
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+</body>
+
+</html>

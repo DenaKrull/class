@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 2em;
+            display: grid;
+            gap: 2em;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        
+        body>* {
+            grid-column: 1/ span 12;
+        }
+        
+        @media screen and (min-width:600px) {
+            nav ul {
+                display: flex;
+                justify-content: space-around;
+            }
+            aside {
+                grid-row: 3;
+                grid-column: 1/ span 3;
+            }
+            article {
+                grid-row: 3;
+                grid-column: 4/ span 9;
+            }
+            .ad {
+                grid-row: 4;
+                grid-column: 1/ span 3;
+            }
+            footer {
+                grid-row: 4;
+                grid-column: 4/span 9;
+            }
+        }
+        
+        @media screen and (min-width:1000px) {
+            nav ul {
+                flex-direction: column;
+            }
+            aside {
+                grid-row: 2;
+                grid-column: 1/span 2;
+            }
+            article {
+                grid-row: 2 /span 2;
+                grid-column: 3 /span 8;
+            }
+            aside {
+                grid-row: 2;
+                grid-column: 11 /span 2;
+            }
+            .ad {
+                grid-row: 3;
+                grid-column: 11/span 2;
+            }
+            footer {
+                grid-column: 1/span 12;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header goes here</header>
+    <nav>
+        <ul>
+            <li><a href="#"> Link 1</a></li>
+            <li> <a href="#"> Link 2</a></li>
+            <li> <a href="#"> Link 3</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1>Main content goes here</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati a recusandae officia? Maiores eum provident id veritatis odit fuga. Atque rerum ratione earum quos ab ea culpa. Quibusdam sit ipsa veritatis ut rem praesentium quidem magnam asperiores.
+            Ut voluptatibus exercitationem corrupti sint dolorem, provident sunt voluptatem quae magnam ullam aspernatur excepturi omnis quidem doloremque eius quasi laudantium incidunt consequatur quis aliquam! Laudantium, temporibus reiciendis. Autem
+            ab minima harum, expedita quaerat atque fugiat quae nobis beatae, dolores voluptas aliquid corrupti molestias ad minus excepturi distinctio debitis dolore? Error aspernatur ipsam aut aliquid deleniti eveniet voluptas cumque, odit magni, officiis,
+            minus quia?</p>
+    </article>
+    <aside>aside- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum mollitia fugiat possimus tempore nulla nam, magni dignissimos iste eum dolorem molestiae totam ex dolor unde!</aside>
+    <div class="ad">Ad goes here - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nam velit optio inventore fuga necessitatibus?</div>
+    <footer>footer goes here</footer>
+</body>
+
+</html>

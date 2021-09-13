@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* article,
+        aside {
+            float: left;
+            padding: 0 1em;
+            box-sizing: border-box;
+        }
+        
+        aside {
+            width: 25%;
+        }
+        
+        article {
+            width: 50%;
+        } */
+        
+        @media screen and (min-width: 800px) {
+            main {
+                display: flex;
+            }
+            body {
+                display: flex;
+            }
+            aside {
+                flex: 1 2 300px;
+            }
+            article {
+                flex: 2 1 150px;
+            }
+        }
+        
+        article,
+        aside {
+            padding: 0 1em;
+        }
+        
+        .form-group {
+            display: flex;
+        }
+        
+        .form-group input {
+            flex: 1;
+            margin-left: .5em;
+        }
+        
+        .outer {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        
+        .inner {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <aside>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex repudiandae voluptatum eum ipsa minima ad reiciendis corporis et eos odio consectetur illo sequi vero possimus velit eius, inventore amet ab?</aside>
+        <article>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia beatae magnam enim saepe facere sint. Perspiciatis laudantium delectus praesentium nihil rerum eligendi soluta, saepe est incidunt vitae ipsa! Dolor numquam vitae eos rem id. Repellat
+            ea tempora, dolor velit enim amet laudantium consequatur, deleniti pariatur quidem quod, unde totam molestiae vel magnam voluptatibus quas veniam officiis. Nihil magnam molestias et temporibus, minus quae quia maiores illum totam ut cum, qui
+            in error! Facere voluptas libero iure! Similique repellendus iste reprehenderit aliquid. Odit laborum voluptatem possimus vero similique, accusantium quasi quae sed officia iure accusamus. Odit ad reprehenderit maxime at ut pariatur, cum quibusdam
+            repudiandae delectus quaerat numquam sunt unde atque minus officiis, quia architecto mollitia omnis deserunt placeat cumque iste et doloremque commodi? Deleniti earum rerum velit veniam blanditiis cupiditate cumque iusto enim illum quasi debitis,
+            distinctio, laborum similique deserunt sequi voluptas alias corporis dolor labore. Libero neque laborum vel! Veritatis quas odit distinctio, rerum, officia temporibus voluptas accusantium reiciendis aperiam maiores placeat, labore deserunt.
+            Consequatur doloremque amet ad quo? Eius autem tenetur atque, quos quibusdam illo optio omnis maiores consectetur voluptatum non nemo architecto deserunt ex? Similique aspernatur voluptatum soluta, officiis eos, nisi ad tenetur minus amet
+            tempore numquam architecto. Fugiat accusamus ullam, consectetur quaerat aut cum, repellat numquam repudiandae voluptate nam amet sit corporis. Tempora error atque minus, optio eligendi blanditiis voluptates laboriosam fugit beatae magnam in
+            dolores, quae consectetur architecto tempore illum amet voluptatem id reiciendis itaque quis ad libero aliquid! Eaque incidunt accusantium architecto esse debitis.</article>
+        <aside>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid dolorem necessitatibus, facere corrupti corporis quasi reprehenderit? Totam quidem et animi libero in quis ipsa accusantium aperiam numquam eligendi. Dolore, commodi?</aside>
+    </main>
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" name="age" id="age">
+        </div>
+        <button>register</button>
+    </form>
+    <div class="outer">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, sequi?</p>
+        <div class="inner">
+            <div>Lorem, ipsum dolor.</div>
+            <div>Similique, temporibus omnis?</div>
+        </div>
+    </div>
+</body>
+
+</html>

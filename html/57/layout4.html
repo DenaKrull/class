@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 2em;
+            display: grid;
+            gap: 2em;
+            grid-template-areas: "header header" "nav nav" "article article" "ad footer";
+        }
+        
+        header {
+            grid-area: header;
+        }
+        
+        nav {
+            grid-area: nav;
+        }
+        
+        article {
+            grid-area: article;
+        }
+        
+        aside {
+            grid-area: aside;
+        }
+        
+        .ad {
+            grid-area: ad;
+        }
+        
+        footer {
+            grid-area: footer;
+        }
+        
+        @media screen and (min-width: 520px) {
+            body {
+                grid-template-columns: 1fr 3fr;
+            }
+            nav ul {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        
+        @media screen and (min-width:800px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header goes here</header>
+    <nav>
+        <ul>
+            <li><a href="#"> Link 1</a></li>
+            <li> <a href="#"> Link 2</a></li>
+            <li> <a href="#"> Link 3</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1>Main content goes here</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati a recusandae officia? Maiores eum provident id veritatis odit fuga. Atque rerum ratione earum quos ab ea culpa. Quibusdam sit ipsa veritatis ut rem praesentium quidem magnam asperiores.
+            Ut voluptatibus exercitationem corrupti sint dolorem, provident sunt voluptatem quae magnam ullam aspernatur excepturi omnis quidem doloremque eius quasi laudantium incidunt consequatur quis aliquam! Laudantium, temporibus reiciendis. Autem
+            ab minima harum, expedita quaerat atque fugiat quae nobis beatae, dolores voluptas aliquid corrupti molestias ad minus excepturi distinctio debitis dolore? Error aspernatur ipsam aut aliquid deleniti eveniet voluptas cumque, odit magni, officiis,
+            minus quia?</p>
+    </article>
+    <aside>aside- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum mollitia fugiat possimus tempore nulla nam, magni dignissimos iste eum dolorem molestiae totam ex dolor unde!</aside>
+    <div class="ad">Ad goes here - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nam velit optio inventore fuga necessitatibus?</div>
+    <footer>footer goes here</footer>
+</body>
+
+</html>

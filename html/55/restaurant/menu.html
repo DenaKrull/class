@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css ">
+    <link rel="stylesheet" href="css/restaurant.css">
+    <link rel="icon" href="images/restaurant.jpg">
+    <style>
+        div {
+            color: white;
+        }
+        
+        #copyright {
+            font-weight: bold;
+        }
+        
+        .menuItems {
+            font-style: italic;
+            overflow: auto;
+            /*clear: left;*/
+            margin-bottom: 1em;
+            box-shadow: 2px 2px 2px 2px red;
+        }
+        
+        .menuItems img {
+            transform: rotate(-7deg);
+            width: 250px;
+            float: left;
+            margin: 2em;
+        }
+        
+        .saleItem {
+            text-shadow: 2px 2px 2px red;
+        }
+        
+        .bigText {
+            font-size: 3em;
+        }
+        
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>PCS Restaurant</h1>
+        <img src="images/restaurant.jpg" alt="the restaurant">
+        <nav>
+
+
+            <ul>
+                <li> <a href="index.html">home</a></li> |
+                <li><a href="menu.html">our menu</a></li> |
+                <li> <a href="aboutus.html">about us</a></li> |
+                <li> <a href="contactUs.html">contact us</a></li> |
+                <li><a href="https://www.google.com" target="_blank">google</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <hr>replace with css-->
+    Menu
+
+    <div class="menuItems">
+        <h2>Steak</h2>
+        <img src="images/steak.jpg" alt="steak">
+        <p>Lorem ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas hic quae obcaecati molestiae labore minima similique aperiam ipsum cumque, asperiores aut magni ea vero unde vitae iure magnam porro quaerat impedit laborum! Modi libero
+            vero minima facere, quidem inventore obcaecati nobis iusto eum. Unde quam natus voluptates. Dolorum culpa temporibus vel eius minus sapiente at explicabo accusantium molestias perferendis quo eveniet suscipit, minima itaque dignissimos expedita
+            facilis sed earum, autem rem. Nesciunt tenetur qui voluptatibus alias pariatur consectetur ipsum, aspernatur non hic aliquid commodi modi repellendus, reiciendis doloremque deleniti suscipit nulla asperiores, perferendis doloribus minus sapiente
+            mollitia magnam. Aperiam, eligendi? dolor sit amet, consectetur adipisicing elit. Quis, quam non! Tempora maiores ducimus sunt suscipit voluptatum porro dolor. Porro dolorem corrupti similique libero quas?</p>
+    </div>
+    <div class="menuItems saleItem">
+        <h2>Burger</h2>
+        <img src="images/burger.jpg" alt="burger">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ducimus voluptatem reiciendis nam magnam velit debitis vel, omnis distinctio quos dolorem dignissimos ipsa. Assumenda, eos.</p>
+    </div>
+
+    <div id="copyright" class="saleItem bigText">&copy; Copyright PCS 2021</div>
+</body>
+
+</html>

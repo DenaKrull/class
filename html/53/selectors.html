@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*universal selector*/
+        
+        * {
+            box-sizing: border-box;
+            font-size: 1.1em;
+        }
+        /*type selector*/
+        
+        section {
+            color: pink;
+        }
+        /* id selector*/
+        
+        #theOne {
+            font-weight: bold;
+        }
+        /*class selector*/
+        
+        .special {
+            border: 1px solid red;
+        }
+        /*multiple selectors*/
+        
+        p,
+        .special {
+            font-style: italic;
+        }
+        /* and - section that has class special*/
+        
+        section .special {
+            text-decoration: line-through;
+        }
+        /*descendent selectors*/
+        /*p inside a section*/
+        
+        section p {
+            font-size: 2em;
+        }
+        /* anything inside of a section*/
+        
+        section * {
+            font-family: cursive;
+        }
+        /*only if a p is directly in a section, immediate children only*/
+        
+        section>p {
+            color: green;
+        }
+        /*sibling selector*/
+        /*p that immediately follows a section*/
+        
+        section+p {
+            margin-top: 5em;
+        }
+        /* only a p who follows a section*/
+        
+        section~p {
+            transform: rotate(5deg);
+        }
+        /*pseudo elements, have double colon*/
+        
+        .special::first-letter {
+            font-size: 2em;
+            font-family: cursive;
+            color: purple;
+        }
+        
+        section::first-line {
+            text-decoration: underline;
+        }
+        /*pseudo classes*/
+        
+        section:hover {
+            background-color: yellow;
+        }
+        /* not*/
+        
+        section:not(.special) {
+            border: 4px dotted brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="special">Selectors</h1>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. In reprehenderit dolorum magnam error rerum molestiae numquam pariatur, sint, minima voluptatum corporis expedita molestias facilis cupiditate quia perferendis rem. Adipisci, voluptatem! Quibusdam
+        eius numquam soluta consequuntur similique delectus rerum qui. Rem earum iusto est quam ea fugiat ducimus asperiores! Asperiores, vero.</section>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem error, ullam quae earum, inventore eveniet, iure fuga porro quibusdam mollitia voluptatum. Beatae ratione voluptates omnis voluptatum. Alias similique perferendis enim quibusdam expedita
+        doloribus quod voluptatem eius iusto animi? Illum natus nostrum neque rem aspernatur modi corrupti voluptate consectetur deleniti quam.</section>
+    <section class="special">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum omnis assumenda ducimus aperiam labore maxime unde laudantium tempore dolorem asperiores deserunt neque recusandae culpa quas quibusdam maiores atque, praesentium repudiandae debitis,
+        sunt explicabo dicta. Obcaecati ducimus distinctio dolor? Accusantium maiores sint praesentium eum ut. Adipisci optio ducimus eveniet facere neque!</section>
+    <section>
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi magni quasi dolor itaque porro corrupti possimus ullam numquam excepturi ad esse, explicabo iste eaque ex! Voluptate quis odio quae aut. Eaque exercitationem nostrum mollitia deserunt
+            consequatur beatae suscipit laudantium rerum eaque!</p>
+        <p>am i imediate?</p>
+    </section>
+    <section>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas libero ea, quis recusandae sunt fugiat asperiores dolorum accusantium voluptatibus repellat quasi iusto accusamus iure? Dolor, praesentium esse. Aperiam quae sequi quibusdam voluptatum
+        tenetur ducimus delectus tempora, consequatur, necessitatibus sunt asperiores saepe ea amet quod debitis commodi vero numquam iste
+        <p>Im a p child</p>
+        <div>
+            <p> I'm in a section, I'm a p granchild
+            </p>
+        </div>
+    </section>
+
+    <p id="theOne">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam et veniam autem alias harum necessitatibus debitis porro dolores laboriosam facilis similique quis ipsam facere dolorem beatae praesentium aliquam architecto non, est fuga. Recusandae impedit
+        tempore officiis veniam maxime consectetur asperiores, ut quaerat alias vitae dolores dicta inventore. Architecto, nostrum nobis?</p>
+</body>
+
+</html>

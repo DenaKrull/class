@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            /*border: 1px solid black;*/
+            border-collapse: collapse;
+        }
+        
+        td,
+        th {
+            /*border-top: 1px solid black;
+            border-bottom: 1px solid black;*/
+            border: 1px solid black;
+            ;
+            padding: .5em 1em;
+        }
+        
+        td {
+            text-align: right;
+        }
+        
+        tfoot td {
+            color: red
+        }
+        
+        caption {
+            font-weight: bold;
+            font-style: italic;
+            caption-side: bottom;
+        }
+        /*.even {
+            background-color: lightcyan;
+        }*/
+        
+        tbody tr:hover {
+            background-color: lightskyblue !important;
+        }
+        
+        tbody tr:nth-child(2n+1) {
+            background-color: lightcyan;
+        }
+        /*
+        tbody tr:nth-child(even) {
+            background-color: lightcyan;
+        }
+        
+        */
+        /*odd  
+        tbody tr:nth-child(2n+1) {
+            background-color: lightcyan;
+        }*/
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+        </thead>
+        <caption>PCS Students Attending</caption>
+        <tbody>
+            <tr>
+                <td>4543</td>
+                <td>86754</td>
+                <td>65654</td>
+                <td>79789</td>
+                <td>456547</td>
+                <td>89879</td>
+                <td>354534</td>
+            </tr>
+            <tr>
+                <td>4543</td>
+                <td>86754</td>
+                <td>65654</td>
+                <td>79789</td>
+                <td>456547</td>
+                <td>89879</td>
+                <td>354534</td>
+            </tr>
+            <tr>
+                <td>4543</td>
+                <td>86754</td>
+                <td>65654</td>
+                <td>79789</td>
+                <td>456547</td>
+                <td>89879</td>
+                <td>354534</td>
+            </tr>
+            <tr>
+                <td>4543</td>
+                <td>86754</td>
+                <td>65654</td>
+                <td>79789</td>
+                <td>456547</td>
+                <td>89879</td>
+                <td>354534</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>89898</td>
+                <td>351010</td>
+                <td>6285654</td>
+                <td>4579789</td>
+                <td>45456547</td>
+                <td>4589879</td>
+                <td>354534</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
+
+</html>
