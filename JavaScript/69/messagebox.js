@@ -20,16 +20,14 @@ window.pcs.messagebox = (function() {
     modalDiv.style.display = 'none';
     document.body.appendChild(modalDiv);
 
-    function showMessageBox(msg, modal) {
+    function showMessageBox(msg, modal, buttons, callback) {
+
         const messageDiv = document.createElement('div');
         const span = document.createElement('span');
         span.innerHTML = msg;
         messageDiv.appendChild(span);
 
         const buttonDiv = document.createElement('div');
-        const okButton = document.createElement('button');
-        okButton.innerText = 'ok';
-        buttonDiv.appendChild(okButton);
         messageDiv.appendChild(buttonDiv);
         document.body.appendChild(messageDiv);
 
@@ -65,13 +63,6 @@ window.pcs.messagebox = (function() {
         }
         messageDiv.style.zIndex = nextZIndex++;
 
-        okButton.addEventListener('click', () => {
-
-            messageDiv.remove();
-
-            modalDiv.style.display = 'none';
-        });
-
         messageDiv.addEventListener('click', () => {
             messageDiv.style.zIndex = nextZIndex++;
         });
@@ -86,11 +77,37 @@ window.pcs.messagebox = (function() {
         if (parseFloat(getComputedStyle(messageDiv).left) + leftOffset + width > window.innerWidth) {
             leftOffset -= window.innerWidth - width;
         }
+
+        const okButton = document.createElement('button');
+        okButton.addEventListener('click', () => {
+            messageDiv.remove();
+            modalDiv.style.display = 'none';
+        });
+
+        if (Array.isArray(buttons)) {
+            let innerButton;
+
+            buttons.forEach(element => {
+                innerButton = document.createElement('button');
+
+                buttonDiv.appendChild(innerButton);
+                innerButton.addEventListener('click', () => {
+                    messageDiv.remove();
+                    if (callback) {
+                        callback(element);
+                    }
+                });
+                innerButton.innerText = element;
+            });
+
+        } else {
+            okButton.innerText = 'ok';
+            buttonDiv.appendChild(okButton);
+        }
     }
 
     return {
         show: showMessageBox
     };
-
 
 }());

@@ -27,12 +27,15 @@
     necessitatibus magni libero vero, similique nesciunt voluptatum tempore totam voluptas veniam repellendus laudantium! Sunt velit adipisci nam, odit eligendi ex expedita veniam.
     <script src="messagebox.js"></script>
     <script>
-        pcs.messagebox.show('Hello World!');
+        // pcs.messagebox.show('Hello World!');
         const messageText = document.getElementById('messageText');
         const modal = document.getElementById('modal');
         document.getElementById('show').addEventListener('click', () => {
             pcs.messagebox.show(messageText.value, modal.checked);
         });
+
+        pcs.messagebox.show('Is this enough homework?', false, ['Yes', 'No', 'Maybe'],
+            usersChoice => console.log('You picked ' + usersChoice));
     </script>
 </body>
 

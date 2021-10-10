@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="Joe">Joe Biden</h1>
+    <h1 id="Kamala">Kamala Harris</h1>
+
+    <script src="pcsTools 2.js"></script>
+    <script>
+        // const joe = pcs.tools.get('joe');
+        // pcs.tools.setCss(joe, 'color', 'pink');
+
+        // const Kamala = pcs.tools.get('Kamala');
+        // pcs.tools.setCss(Kamala, 'color', 'yellow');
+
+        // const joe = pcs.tools.wrap('Joe');
+        // joe.css('color', 'pink');
+        // console.log(joe.css('color'));
+
+        // const Kamala = pcs.tools.wrap('Kamala');
+        // Kamala.css('color', 'yellow');
+        // console.log(Kamala.css('color'));
+
+        // joe.click(() => {
+        //     console.log('joe was clicked');
+        //     joe.hide();
+        //     setTimeout(() => joe.show(), 2000);
+        // });
+
+
+        // const joe = pcs.tools.wrap('Joe')
+        //     .css('color', 'pink')
+        //     .click(() => {
+        //         console.log('joe was clicked');
+        //         joe.hide();
+        //         setTimeout(() => joe.show(), 2000);
+        //     })
+        //     .hide();
+
+        // setTimeout(() => joe.show(), 2000);
+
+
+
+        const joe = pcs('Joe')
+            .css('color', 'pink')
+            .click(() => {
+                console.log('joe was clicked');
+                joe.hide();
+                setTimeout(() => joe.show(), 2000);
+            })
+            .hide();
+
+        setTimeout(() => joe.show(), 2000);
+
+        const kamala = pcs('kamala');
+        Kamala.css('color', 'yellow');
+        console.log(Kamala.css('color'));
+    </script>
+</body>
+
+</html>

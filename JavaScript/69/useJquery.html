@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #name:hover {
+            background-color: yellow;
+        } */
+        
+        .hover {
+            background-color: yellow !important;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="Joe">Joe Biden</h1>
+    <h1 id="Kamala">Kamala Harris</h1>
+
+    <hr>
+
+    <input id="name" style="background-color: green;">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        const joe = $('#Joe')
+            .css('color', 'pink')
+            .click(() => {
+                console.log('joe was clicked');
+                joe.hide();
+                setTimeout(() => joe.show(), 2000);
+            })
+            .hide();
+
+        setTimeout(() => joe.show(), 2000);
+
+        const kamala = $('#Kamala');
+        kamala.css('color', 'yellow');
+        console.log(kamala.css('color'));
+        kamala.click(() => console.log('Kamala was clicked'));
+
+        const theH1s = $('h1').css('background-color', 'black');
+        console.log(theH1s);
+
+        // console.log(theH1s).get(); //real array
+
+        const theNameElem = $('#name');
+
+        theNameElem.change(event => console.log(event, event.target.value))
+            //         .mouseenter(() => theNameElem.css('background-color', 'yellow'))
+            //         .mouseleave(() => theNameElem.css('background-color', 'white'));
+            // .mouseenter(() => theNameElem.addClass('hover'))
+            // .mouseleave(() => theNameElem.removeClass('hover'));
+            .hover(() => theNameElem.addClass('hover'), () => theNameElem.removeClass('hover'));
+
+
+        theH1s.click(function() {
+            $(this).append('<button> Click m!! <button>')
+                .click(() => console.log('button was clicked'));
+        });
+    </script>
+</body>
+
+</html>
