@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        #map,
+        #search {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #map {
+            width: 80%;
+        }
+        
+        #search {
+            width: 20%;
+            float: left;
+            text-align: center;
+            padding: 1em;
+            overflow-y: auto;
+            background-color: #252424;
+            box-sizing: border-box;
+        }
+        
+        input {
+            width: 60%;
+        }
+        
+        input,
+        button {
+            background-color: #fff;
+            border: 1px solid white;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-top: 1em;
+        }
+        
+        li {
+            border: 1px solid black;
+            cursor: pointer;
+            color: white;
+        }
+        
+        li:hover {
+            background-color: rgb(112, 112, 112);
+            color: black;
+        }
+        
+        img {
+            width: 100px;
+            height: 100px;
+            vertical-align: middle;
+            margin: 1em;
+            margin-bottom: 0;
+        }
+        
+        *::-webkit-scrollbar {
+            width: 9px;
+        }
+        
+        *::-webkit-scrollbar-track {
+            background: inherit;
+        }
+        
+        *::-webkit-scrollbar-thumb {
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: 1px solid #000000;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="search">
+        <input type="text" placeholder="enter place">
+        <button>Go</button>
+        <ul id="places"></ul>
+    </div>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ-Le_m1HbSirGQgWru8w9r9YIPalvMH8&v=weekly&libraries=drawing">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="map.js"></script>
+</body>
+
+</html>

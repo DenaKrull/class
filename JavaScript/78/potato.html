@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        
+        #parts {
+            width: 25%;
+            float: left;
+            height: 100%;
+        }
+        
+        #main {
+            width: 75%;
+            float: left;
+            height: 100%;
+        }
+        
+        .part {
+            margin: 1em;
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .potato {
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parts"></div>
+    <div id="main"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="potato.js"></script>
+</body>
+
+</html>

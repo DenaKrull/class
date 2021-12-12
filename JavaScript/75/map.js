@@ -17,7 +17,7 @@
     const marker = new google.maps.Marker({
         position: bmgloc,
         map: map,
-        animation: google.maps.Animation.DROP,
+        Animation: google.maps.Animation.DROP,
         icon: {
             url: 'https://media-exp1.licdn.com/dms/image/C560BAQHeo1T77FjcCw/company-logo_200_200/0/1519906416652?e=2159024400&v=beta&t=NJaKReb9PuQDF1_aAt7O9mJ09zo1ijrivt-9PQWOKvk',
             scaledSize: new google.maps.Size(50, 50)
