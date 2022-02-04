@@ -1,0 +1,19 @@
+<!-- <select #categorySelect (change)="categorySelected(categorySelect.value)"> -->
+<!-- <option hidden>select</option> -->
+<!-- <option *ngFor="let category of categories; let i =index;" [value]="i" [selected]="i===selectedIndex"> -->
+<select [(ngModel)]="selectedIndex" (ngModelChange)="handleselectedIndexChanged()">
+  <option *ngFor="let category of categories; let i =index;" [value]="i">
+    <app-category-info [category]="category"></app-category-info>
+
+  </option>
+</select>
+
+<!-- <ul>
+ <li *ngFor="let item of selectedCategory?.items">
+    <app-item-info [item]="item"></app-item-info>
+  </li> -->
+<!-- 
+  <li *ngFor="let item of categories[selectedIndex].items">
+    <app-item-info [item]="item"></app-item-info>
+  </li>
+</ul>  -->
