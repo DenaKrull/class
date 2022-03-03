@@ -42,5 +42,5 @@ app.use(function (err, req, res, next) {
   });
 });
 
-app.locals.appTitle ='PCS'
+app.locals.appTitle ='PCS Contacts App';
 module.exports = app;

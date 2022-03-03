@@ -28,23 +28,19 @@ router.get('/', function (req, res, next) {
   });
 });
 
-router.get('/addContact', (req, res) => {
+router.get('/addContact', (req, res, next) => {
   res.render('layout', {
-    title: 'Add Contacts',
+    title: 'Add Contact',
     css: ['contact.css'],
     partials: { content: 'contact' }
   });
 });
 
-router.post('/addContact', (req, res) => {
+router.post('/addContact', (req, res, next) => {
   req.body.is = nextId++;
   contacts.push(req.body);
   res.redirect('/contacts');
 });
-
-
-
-
 
 router.get('/editContact/:id', (req, res, next) => {
   let contact = contacts.find(contact => contact.id === parseInt(req.params.id));
@@ -55,7 +51,8 @@ router.get('/editContact/:id', (req, res, next) => {
     partials: { content: 'contact' }
   });
 });
-router.post('/editContacts/:id', (req, res, next) => {
+
+router.post('/editContact/:id', (req, res, next) => {
   let contact = contacts.find(contact => contact.id === parseInt(req.params.id));
   Object.assign(contact,req.body);
  res.redirect('/contacts');
@@ -65,4 +62,6 @@ router.get('/deleteContact/:id', (req, res, next) => {
   contacts = contacts.filter(contact => contact.id !== parseInt(req.params.id));
   res.redirect('/contacts');
 });
+
+
 module.exports = router;

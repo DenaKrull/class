@@ -1,25 +1,27 @@
-<form>
+<form method="POST">
   <div class="formGroup">
     <label for="first">First:</label>
-    <input id="first" name="first" required value="{{#contact}}{{first}}{{/contacts}}">
+    <input id="first" name="first" required value="{{#contact}}{{first}}{{/contact}}">
   </div>
 
   <div class="formGroup">
     <label for="last">Last:</label>
-    <input id="last" name="last" required value="{{#contact}}{{last}}{{/contacts}}"
+    <input id="last" name="last" required value="{{#contact}}{{last}}{{/contact}}">
   </div>
+
   <div class="formGroup">
     <label for="email">Email: </label>
-    <input type="email" name="email" id="email" value="{{#contact}}{{email}}{{/contacts}}">
+    <input type="email" name="email" id="email" value="{{#contact}}{{email}}{{/contact}}">
   </div>
+
   <div class="formGroup">
     <label for="phone">Phone: </label>
-    <input id="phone" name="phone" value="{{#contact}}{{phone}}{{/contacts}}">
+    <input id="phone" name="phone" value="{{#contact}}{{phone}}{{/contact}}">
   </div>
+
   <div class="buttons">
     <button>save</button>
     <a class="btn" href="/contacts">cancel</a>
-
   </div>
 
 </form>

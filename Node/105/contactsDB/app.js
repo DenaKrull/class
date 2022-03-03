@@ -41,17 +41,16 @@ app.use(function (err, req, res, next) {
     partials: { content: 'error' }
   });
 });
-
 const mysql = require('mysql');
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'nodeUser3',
+  user: 'nodeuser',
   password: 'test123',
-  database: 'nodeUser3'
+  database: 'nodeuser'
 });
 
 connection.connect();
+global.connection = connection;
 
-globals.connection = connection;
-app.locals.appTitle = 'PCS'
+app.locals.appTitle = 'PCS Contacts App';
 module.exports = app;
